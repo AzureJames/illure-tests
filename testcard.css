@@ -3,7 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: consolas, monospace;
+  font-family: 'Electrolize', sans-serif;
+}
+
+h1, h2, h3 {
+font-family: 'Orbitron', sans-serif;
+}
+
+body a {
+  font-family: 'Aldrich', sans-serif;
 }
 
 body
@@ -12,7 +20,7 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #1d061a
+  background: url("bg.png");
 }
 
 .container
