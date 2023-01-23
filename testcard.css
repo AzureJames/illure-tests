@@ -261,18 +261,20 @@ body
   transform: skew(-10deg);
   margin-top: 5px;
   transition: all 0.4s ease-in-out;
-  background: #111;
+  background: linear-gradient(rgba(19, 106, 153, 0.4), #111);
   padding: 10px;
   border-radius: 4px;
   border: 2px solid rgb(133, 198, 203);
   width: fit-content;
-}
-.button-container:hover
-{
-  background: #1aefcf;
-  border: 1px solid rgba(19, 106, 153, 0.4);
-  box-shadow: 0 1px 15px rgba(25, 25, 26, 0.2);
-  color: #0a5d50;
+
+/*grad part*/
+    position: relative;
+  /* min-height: 200px; */
+  background-image: linear-gradient(
+    to left,
+    rgba(19, 106, 153, 0.4), #111
+  );
+  z-index: 1;
 }
 
 .container .box .content a /*button*/
@@ -288,12 +290,29 @@ body
 
 .box .content .button-container:hover >  a
 {
-  color: #0a5d50;
+  color: rgb(7, 35, 51);
 }
 
 
-
-
+/*grad part*/
+.button-container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    #1aefcf, rgba(19, 106, 153, 0.4)
+  );
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+.button-container:hover::before {
+  opacity: 1;
+}
 
 
 
