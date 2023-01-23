@@ -17,6 +17,8 @@ body
   align-items: center;
   min-height: 100vh;
   background: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container
@@ -307,7 +309,7 @@ body
     #1aefcf, rgba(19, 106, 153, 0.4)
   );
   z-index: -1;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.4s linear;
   opacity: 0;
 }
 .button-container:hover::before {
